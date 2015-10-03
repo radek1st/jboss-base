@@ -9,7 +9,7 @@ WORKDIR /opt/jboss
 RUN cat jboss-eap-6.1.0.zipaa jboss-eap-6.1.0.zipab jboss-eap-6.1.0.zipac > jboss-eap-6.1.0.zip; \
     unzip jboss-eap-6.1.0.zip; \
     mv jboss-eap-6.1/* .; \
-    rm -r jboss-eap-6.1.0.zip jboss-eap-6.1; \
+    rm -r jboss-eap-6.1.0.zip* jboss-eap-6.1; \
     chown -R jboss:jboss /opt/jboss
 USER jboss
 EXPOSE 8080 9990
