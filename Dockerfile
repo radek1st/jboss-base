@@ -17,5 +17,5 @@ EXPOSE 8080 9990
 ENV JAVA_HOME /usr/java/jdk1.7.0_51
 ENV PATH $JAVA_HOME/bin:$PATH
 ENV JBOSS_HOME /opt/jboss
-VOLUME /opt/jboss/standalone/deployments/
+VOLUME /opt/jboss/standalone/deployments
 CMD ["/opt/jboss/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
