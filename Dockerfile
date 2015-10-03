@@ -10,7 +10,8 @@ RUN cat jboss-eap-6.1.0.zipaa jboss-eap-6.1.0.zipab jboss-eap-6.1.0.zipac > jbos
     unzip jboss-eap-6.1.0.zip; \
     mv jboss-eap-6.1/* .; \
     rm -r jboss-eap-6.1.0.zip* jboss-eap-6.1; \
-    chown -R jboss:jboss /opt/jboss
+    chown -R jboss:jboss /opt/jboss; \
+    chown jboss:jboss /opt/jboss/standalone/deployments
 USER jboss
 EXPOSE 8080 9990
 ENV JAVA_HOME /usr/java/jdk1.7.0_51
